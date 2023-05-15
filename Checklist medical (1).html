@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checklist Programı</title>
+	
+	<style>
+		.container {
+			margin: 50px auto;
+			padding: 20px;
+			width: 80%;
+			background-color: #f2f2f2;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+		}
+		h1, h3 {
+			text-align: center;
+			font-family: Arial, sans-serif;
+			color: #333;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+		}
+		li {
+			padding: 10px;
+			margin: 5px 0;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+		}
+		input[type=checkbox] {
+			margin-right: 10px;
+		}
+	</style>
+	
+	
+</head>
+<body>
+<div class="container">
+
+
+	<h1>Materyal Kontrolü</h1>
+	
+
+<label id="materyal-label"></label>
+
+
+<label for="materyal-tipi">Materyal Tipi:</label>
+	<select id="materyal-tipi" onchange="showSelection()">
+		<option value="">Seçiniz</option>
+		<option value="A">Advertisement</option>
+		<option value="B">Advisory Board Material</option>
+		<option value="C">(Abbreviated) Product Information / ISI</option>
+		<option value="D">Banner Ad</option>
+		<option value="E">Book / Textbook</option>
+		<option value="F">Congress / Event materials</option>
+		<option value="G">Content Dissemination Plan</option>
+		<option value="H">Core Content Module</option>
+		<option value="I">Coupon / Voucher</option>
+		<option value="J">Detail Aid (Non Digital)</option>
+		<option value="K">E-Detail Aid</option>
+		<option value="L">Institutional/Partnership Activities</option>
+		<option value="M">Internal Training Materials</option>
+		<option value="N">Leave Behind</option>
+		<option value="O">Mail / e-mail</option>
+		<option value="P">Market Access Resource</option>
+		<option value="R">Mobile/Tablet Application</option>
+		<option value="S">Paid Search</option>
+		<option value="T">Patient Education/Program materials</option>
+		<option value="U">Press Material</option>
+		<option value="V">Product Monograph</option>
+		<option value="Y">Publication Summary</option>
+		<option value="Z">Reprint</option>
+		<option value="AB">Reprint Carrier</option>
+		<option value="AC">Slide Deck</option>
+		<option value="AD">Social Media</option>
+		<option value="AF">Video / Audio / TV</option>
+		<option value="AG">Webinar</option>
+		<option value="AJ">Website</option>
+	</select>
+
+	<br><br>
+
+	<label id="secim-alani"></label>
+
+	<script>
+		function showSelection() {
+			var selection = document.getElementById("materyal-tipi").value;
+			var secimAlani = document.getElementById("secim-alani");
+
+			if (selection === "A") {
+				secimAlani.innerHTML = "<b><i>Promo / All</i></b>";
+			} else if (selection === "B") {
+				secimAlani.innerHTML = "<b><i>Non promo / Unbranded</i></b>";
+			} else if (selection === "C") {
+				secimAlani.innerHTML = "<b><i>Non promo / Unbranded</i></b>";
+			} else if (selection === "D") {
+				secimAlani.innerHTML = "<b><i>Promo / All</i></b>";
+			} else if (selection === "E") {
+				secimAlani.innerHTML = "<b><i>Non promo / Unbranded</i></b>";
+			} else if (selection === "F") {
+				secimAlani.innerHTML = "<b><i>Promo / All</i></b>";
+			} else if (selection === "G") {
+				secimAlani.innerHTML = "<b><i>Promo / All</i></b>";
+			} else if (selection === "H") {
+				secimAlani.innerHTML = "<b><i>All / All</i></b>";
+			} else if (selection === "I") {
+				secimAlani.innerHTML = "<b><i>Promo / All</i></b>";
+			} else if (selection === "J") {
+				secimAlani.innerHTML = "<b><i>Promo / All</i></b>";
+			} else if (selection === "K") {
+				secimAlani.innerHTML = "<b><i>Promo / All</i></b>";
+			} else if (selection === "L") {
+				secimAlani.innerHTML = "<b><i>Non promo / Unbranded</i></b>";
+			} else if (selection === "M") {
+				secimAlani.innerHTML = "<b><i>Non promo / Unbranded</i></b>";
+			} else if (selection === "N") {
+				secimAlani.innerHTML = "<b><i>Promo / All</i></b>";
+			} else if (selection === "O") {
+				secimAlani.innerHTML = "<b><i>All / All</i></b>";
+			} else if (selection === "P") {
+				secimAlani.innerHTML = "<b><i>Non promo / Unbranded</i></b>";
+			} else if (selection === "R") {
+				secimAlani.innerHTML = "<b><i>All / All</i></b>";
+			} else if (selection === "S") {
+				secimAlani.innerHTML = "<b><i>All / All</i></b>";
+			} else if (selection === "T") {
+				secimAlani.innerHTML = "<b><i>Non promo / Unbranded</i></b>";
+			} else if (selection === "U") {
+				secimAlani.innerHTML = "<b><i>Non promo / Unbranded</i></b>";
+			} else if (selection === "V") {
+				secimAlani.innerHTML = "<b><i>Promo / Branded</i></b>";
+			} else if (selection === "Y") {
+				secimAlani.innerHTML = "<b><i>Non promo / Unbranded</i></b>";
+			} else if (selection === "Z") {
+				secimAlani.innerHTML = "<b><i>All / All</i></b>";
+			} else if (selection === "AB") {
+				secimAlani.innerHTML = "<b><i>All / All</i></b>";
+			} else if (selection === "AC") {
+				secimAlani.innerHTML = "<b><i>All / All</i></b>";
+			} else if (selection === "AD") {
+				secimAlani.innerHTML = "<b><i>Non promo / Unbranded</i></b>";
+			} else if (selection === "AF") {
+				secimAlani.innerHTML = "<b><i>All / All</i></b>";
+			} else if (selection === "AG") {
+				secimAlani.innerHTML = "<b><i>Promo / Unbranded</i></b>";
+			} else if (selection === "AJ") {
+				secimAlani.innerHTML = "<b><i>All / All</i></b>";
+			} else {
+				secimAlani.innerHTML = "";
+			}
+		}
+	</script>
+
+
+	
+	<p>Kontrol edilecek materyalin kullanım amacı:</p>
+	<input type="radio" name="materyal" value="promotional" id="broşür" onclick="showChecklist()"> <label for="broşür">Promotional</label><br>
+	<input type="radio" name="materyal" value="nonpromotional" id="davetiye" onclick="showChecklist()"> <label for="davetiye">Non promotional</label><br>
+
+
+
+<div id="brandedHeader" style="display: none;">
+<p>Markalama:</p>
+	<input type="radio" name="brandedHeader" value="branded" id="branded1" onclick="showlist()"> <label for="broşür">Branded</label><br>
+	<input type="radio" name="brandedHeader" value="unbranded" id="unbranded1" onclick="showlist()"> <label for="davetiye">Unbranded</label><br>
+</div>
+
+<div id="unbrandedHeader" style="display: none;">
+<p>Markalama:</p>
+	<input type="radio" name="unbrandedHeader" value="unbranded" id="unbranded2" onclick="showlist2()"> <label for="davetiye2">Unbranded</label><br>
+</div>
+
+
+
+
+	<div id="promobranded" style="display: none;">
+		<h3>Kontrol edilmesi gerekenler <i>(promotional branded)</i></h3>
+		<ul>
+			<li><input type="checkbox" name="ürün_kübü" id="ürün_kübü"> <label for="ürün_kübü">Intended use alanı uygun mu? (Internal/External)</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Fast track değilse minimum review süresi 5 gün mü?</label></li>
+			<li><input type="checkbox" name="branded_seçeneği" id="branded_seçeneği"> <label for="branded_seçeneği">Expiration date maksimum 2 yıl olarak belirlendi mi?</label></li>
+			<li><input type="checkbox" name="ürün_kübü" id="ürün_kübü"> <label for="ürün_kübü">MAT kodu, son versiyon numarası ve onay tarihi yer alıyor mu?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">MAT kodu tüm sayfalarda ve belge özelliklerinde aynı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Güncel KÜB özeti ekli mi?</label></li>
+			<li><input type="checkbox" name="branded_seçeneği" id="branded_seçeneği"> <label for="branded_seçeneği">Referans literatürü yüklü mü?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Literatürün anchorlaması yapıldı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Linklenen referansların içerisinde ilgili cümle işaretli mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Verilen referanslar doğru ve ulaşılabilir mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Ürüne ait herhangi bir güvenlik uyarısı varsa, bu bilgi materyal içeriğinde yer alıyor mu?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyal oluşturulurken kullanılan bilgiler, en güncel KÜB/KT referans alınarak mı hazırlandı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde kullanılan veriler; doğru, açık, güncel, kanıta dayalı (objektif), konuyla ilgili, ve bilimsel mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde "en iyi, üstün, altın standart" gibi belirsiz ve promosyonel algılanabilecek ifadeler kullanılmasından kaçınıldı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde rakip ürünü ya da firmayı küçük düşürücü herhangi bir ifade olmamasına dikkat edildi mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde yer alan bilgiler Sanofi etik değerlerine (insana ve çevreye saygı; şirket bilgilerinin gizliliği; işbirliğinde ve operasyonlarda şeffaflık) uygun mu?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Ürün, tanıtımı yapılacak ülkede ruhsatlı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Ürünün tanıtımı yapılan endikasyonda kullanım onayı var mı?</label></li>
+			
+		
+		</ul>
+	</div>
+
+	<div id="promounbranded" style="display: none;">
+		<h3>Kontrol edilmesi gerekenler <i>(promotional unbranded)</i></h3>
+		<ul>
+			<li><input type="checkbox" name="ürün_kübü" id="ürün_kübü"> <label for="ürün_kübü">Intended use alanı uygun mu? (Internal/External)</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Fast track değilse minimum review süresi 5 gün mü?</label></li>
+			<li><input type="checkbox" name="branded_seçeneği" id="branded_seçeneği"> <label for="branded_seçeneği">Expiration date maksimum 2 yıl olarak belirlendi mi?</label></li>
+			<li><input type="checkbox" name="ürün_kübü" id="ürün_kübü"> <label for="ürün_kübü">MAT kodu, son versiyon numarası ve onay tarihi yer alıyor mu?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">MAT kodu tüm sayfalarda ve belge özelliklerinde aynı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde ürün ismi, logosu, rengi gibi özelliklerden kaçınıldı mı?</label></li>
+			<li><input type="checkbox" name="branded_seçeneği" id="branded_seçeneği"> <label for="branded_seçeneği">Referans literatürü yüklü mü?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Literatürün anchorlaması yapıldı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Linklenen referansların içerisinde ilgili cümle işaretli mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Verilen referanslar doğru ve ulaşılabilir mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde kullanılan veriler; doğru, açık, güncel, kanıta dayalı (objektif), konuyla ilgili, ve bilimsel mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde "en iyi, üstün, altın standart" gibi belirsiz ve promosyonel algılanabilecek ifadeler kullanılmasından kaçınıldı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde çalışmaların sonlanım noktaları, limitasyonlar gibi karakteristik bilgileri yer alıyor mu?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde rakip ürünü ya da firmayı küçük düşürücü herhangi bir ifade olmamasına dikkat edildi mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde yer alan bilgiler Sanofi etik değerlerine (insana ve çevreye saygı; şirket bilgilerinin gizliliği; işbirliğinde ve operasyonlarda şeffaflık) uygun mu?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Ürün, tanıtımı yapılacak ülkede ruhsatlı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Ürünün tanıtımı yapılan endikasyonda kullanım onayı var mı?</label></li>
+		
+		</ul>
+	</div>
+	
+	<div id="nonpromounbranded" style="display: none;">
+		<h3>Kontrol edilmesi gerekenler <i>(non promotional unbranded)</i></h3>
+		<ul>
+			<li><input type="checkbox" name="ürün_kübü" id="ürün_kübü"> <label for="ürün_kübü">Intended use alanı uygun mu? (Internal/External)</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Fast track değilse minimum review süresi 5 gün mü?</label></li>
+			<li><input type="checkbox" name="branded_seçeneği" id="branded_seçeneği"> <label for="branded_seçeneği">Expiration date maksimum 2 yıl olarak belirlendi mi?</label></li>
+			<li><input type="checkbox" name="ürün_kübü" id="ürün_kübü"> <label for="ürün_kübü">MAT kodu, son versiyon numarası ve onay tarihi yer alıyor mu?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">MAT kodu tüm sayfalarda ve belge özelliklerinde aynı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde ürün ismi, logosu, rengi gibi özelliklerden kaçınıldı mı?</label></li>
+			<li><input type="checkbox" name="branded_seçeneği" id="branded_seçeneği"> <label for="branded_seçeneği">Referans literatürü yüklü mü?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Literatürün anchorlaması yapıldı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Linklenen referansların içerisinde ilgili cümle işaretli mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Verilen referanslar doğru ve ulaşılabilir mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyal oluşturulurken kullanılan bilgiler, en güncel KÜB/KT referans alınarak mı hazırlandı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde kullanılan veriler; doğru, açık, güncel, kanıta dayalı (objektif), konuyla ilgili, ve bilimsel mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde "en iyi, üstün, altın standart" gibi belirsiz ve promosyonel algılanabilecek ifadeler kullanılmasından kaçınıldı mı?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde rakip ürünü ya da firmayı küçük düşürücü herhangi bir ifade olmamasına dikkat edildi mi?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Materyalde yer alan bilgiler Sanofi etik değerlerine (insana ve çevreye saygı; şirket bilgilerinin gizliliği; işbirliğinde ve operasyonlarda şeffaflık) uygun mu?</label></li>
+			<li><input type="checkbox" name="mat_kodu" id="mat_kodu"> <label for="mat_kodu">Ürünün off-label kullanımıyla alakalı bilgiler varsa, SMM'den reaktif bir istek mevcut mu?</label></li>
+		
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		
+
+		
+		
+		function showChecklist() {
+			var materyal = document.querySelector('input[name="materyal"]:checked').value;
+			var brandedHeader = document.getElementById('brandedHeader');
+			var unbrandedHeader = document.getElementById('unbrandedHeader');
+
+			if (materyal == 'promotional') {
+				brandedHeader.style.display = 'block';
+				unbrandedHeader.style.display = 'none';
+			} else 
+			{
+			
+	
+			if (materyal == 'nonpromotional') {
+				unbrandedHeader.style.display = 'block';
+				brandedHeader.style.display = 'none';
+			
+			}
+			}
+			
+		}
+		
+		function showlist() {
+			var brandedHeader = document.querySelector('input[name="brandedHeader"]:checked').value;
+			var promobranded = document.getElementById('promobranded');
+			var promounbranded = document.getElementById('promounbranded');
+			var nonpromounbranded = document.getElementById('nonpromounbranded');
+
+			if (brandedHeader == 'branded') {
+				promobranded.style.display = 'block';
+				promounbranded.style.display = 'none';
+				nonpromounbranded.style.display = 'none';
+			} else 
+			{
+			
+	
+			if (brandedHeader == 'unbranded') {
+				promobranded.style.display = 'none';
+				promounbranded.style.display = 'block';
+				nonpromounbranded.style.display = 'none';
+			
+			} 
+			
+	
+	
+			}
+			
+		}
+		
+		
+		function showlist2() {
+			var unbrandedHeader = document.querySelector('input[name="unbrandedHeader"]:checked').value;
+			var promobranded = document.getElementById('promobranded');
+			var promounbranded = document.getElementById('promounbranded');
+			var nonpromounbranded = document.getElementById('nonpromounbranded');
+
+			if (unbrandedHeader == 'unbranded') {
+				promobranded.style.display = 'none';
+				promounbranded.style.display = 'none';
+				nonpromounbranded.style.display = 'block';
+			} else 
+			{
+			
+	
+			
+			} 
+			
+	
+	
+			
+		}
+
+		
+
+		
+	
+		
+		
+	</script>
+	
+
+	
+
+
+</body>
+</html>
